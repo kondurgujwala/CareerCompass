@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h1>CareerCompass</h1>
+                <p>Smart Career Guidance</p>
+            </div>
+
+            <nav>
+                <ul class="sidebar-nav">
+                    <li><a href="dashboard.html" class="active">🏠 Dashboard</a></li>
+                    <li><a href="profile.html">👤 Profile</a></li>
+                    <li><a href="career.html">🎯 Careers</a></li>
+                    <li><a href="courses.html">📚 Courses</a></li>
+                    <li><a href="progress.html">📊 Progress</a></li>
+                    <li><a href="skill-gap.html">⚡ Skill Gap</a></li>
+                    <li><a href="test.html">✏️ Test</a></li>
+                </ul>
+            </nav>
+
+            <!-- ✅ Logout Button -->
+            <button onclick="logout()" style="
+                margin:20px;
+                padding:10px;
+                background:#ef4444;
+                color:white;
+                border:none;
+                border-radius:6px;
+                cursor:pointer;">
+                Logout
+            </button>
+        </aside>
+
+        <!-- Main -->
+        <main class="main-content">
+            <div class="content-wrapper">
+
+                <div class="dashboard-header">
+                    <h1>Welcome back!</h1>
+                    <p>Here's your dashboard overview</p>
+                    <div id="dashboardNotice" style="display:none;"></div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-4">
+                    <div class="card stat-card">
+                        <h3 class="stat-value">—</h3>
+                        <p>Tests Taken</p>
+                    </div>
+                    <div class="card stat-card">
+                        <h3 class="stat-value">—</h3>
+                        <p>Average Score</p>
+                    </div>
+                    <div class="card stat-card">
+                        <h3 class="stat-value">—</h3>
+                        <p>Skills Assessed</p>
+                    </div>
+                    <div class="card stat-card">
+                        <h3 class="stat-value">—</h3>
+                        <p>Recent Attempts</p>
+                    </div>
+                </div>
+
+                <!-- Activity -->
+                <div class="card" style="margin-top:20px;">
+                    <h2>Recent Activity</h2>
+                    <div id="activityBox">
+                        Loading...
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

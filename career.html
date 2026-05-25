@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - Careers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="career.css">
+</head>
+<body>
+    <div class="app-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h1>CareerCompass</h1>
+                <p>Smart Career Guidance</p>
+            </div>
+            <nav>
+                <ul class="sidebar-nav">
+                    <li><a href="dashboard.html"><span>🏠</span> Dashboard</a></li>
+                    <li><a href="profile.html"><span>👤</span> Profile</a></li>
+                    <li><a href="career.html" class="active"><span>🎯</span> Careers</a></li>
+                    <li><a href="courses.html"><span>📚</span> Courses</a></li>
+                    <li><a href="progress.html"><span>📊</span> Progress</a></li>
+                    <li><a href="skill-gap.html"><span>⚡</span> Skill Gap</a></li>
+                    <li><a href="test.html"><span>✏️</span> Test</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+
+                <div class="page-header">
+                    <h1 class="page-title">Career Recommendations</h1>
+                    <p class="page-subtitle">Explore career paths matched to your skills and profile</p>
+                    <div id="careerNotice" class="alert" style="display:none; margin-top:16px; padding:12px 14px; border-radius:8px;"></div>
+                </div>
+
+                <!-- Careers Grid -->
+                <div class="grid grid-3" id="careerContainer">
+                    <div class="placeholder-box" style="grid-column: 1/-1;">
+                        Loading career recommendations...
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="career.js"></script>
+</body>
+</html>

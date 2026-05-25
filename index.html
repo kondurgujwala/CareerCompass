@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - Navigate Your Career with Confidence</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Landing page specific styles */
+        .landing-hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 80px 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-logo {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero-tagline {
+            font-size: 20px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .landing-features {
+            padding: 80px 40px;
+            background-color: white;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-title {
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-dark);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .feature-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-teal);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .feature-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .feature-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .landing-footer {
+            padding: 40px;
+            background-color: var(--primary-dark);
+            color: white;
+            text-align: center;
+        }
+
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .landing-hero {
+                padding: 60px 20px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-tagline {
+                font-size: 18px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .landing-features {
+                padding: 60px 20px;
+            }
+
+            .features-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="landing-hero">
+        <div class="hero-content">
+            <div class="hero-logo">🧭</div>
+            <h1 class="hero-title">CareerCompass</h1>
+            <p class="hero-tagline">Navigate Your Career with Confidence</p>
+            <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Get personalized career recommendations, assess your skills, track your progress, and discover the perfect career path for your future.
+            </p>
+            <div class="hero-cta">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="landing-features">
+        <div class="features-container">
+            <h2 class="features-title">Why Choose CareerCompass?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Career Recommendations</h3>
+                    <p class="feature-desc">Discover career paths tailored to your skills, interests, and goals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Skill Assessment</h3>
+                    <p class="feature-desc">Evaluate your current skills with our comprehensive assessment tests.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">Progress Tracking</h3>
+                    <p class="feature-desc">Monitor your growth and improvements with detailed analytics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3 class="feature-title">Course Suggestions</h3>
+                    <p class="feature-desc">Access curated learning resources to bridge skill gaps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="landing-footer">
+        <p>© 2024 CareerCompass. Project by Ujwala & Siddarth | B.Tech Computer Engineering</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,40 @@
+.career-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.career-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.career-match {
+    font-size: 13px;
+    color: var(--accent-teal);
+    font-weight: 500;
+}
+
+.career-skills {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.career-skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.skill-tag {
+    padding: 4px 12px;
+    background-color: rgba(14, 165, 233, 0.1);
+    border: 1px solid var(--accent-teal);
+    border-radius: 16px;
+    font-size: 11px;
+    color: var(--accent-teal);
+    font-weight: 500;
+}

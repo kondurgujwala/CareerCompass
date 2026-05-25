@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - Skill Gap Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="skill-gap.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h1>CareerCompass</h1>
+                <p>Smart Career Guidance</p>
+            </div>
+            <nav>
+                <ul class="sidebar-nav">
+                    <li><a href="dashboard.html"><span>🏠</span> Dashboard</a></li>
+                    <li><a href="profile.html"><span>👤</span> Profile</a></li>
+                    <li><a href="career.html"><span>🎯</span> Careers</a></li>
+                    <li><a href="courses.html"><span>📚</span> Courses</a></li>
+                    <li><a href="progress.html"><span>📊</span> Progress</a></li>
+                    <li><a href="skill-gap.html" class="active"><span>⚡</span> Skill Gap</a></li>
+                    <li><a href="test.html"><span>✏️</span> Test</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h1 class="page-title">Skill Gap Analysis</h1>
+                    <p class="page-subtitle">Identify gaps between your current and required skills</p>
+                    <div id="skillGapNotice" class="alert" style="display:none; margin-top:16px; padding:12px 14px; border-radius:8px;"></div>
+                </div>
+
+                <!-- Two Column Comparison -->
+                <div class="grid grid-2">
+                    <!-- Your Current Skills -->
+                    <div class="card">
+                        <h2 class="card-title">✓ Your Current Skills</h2>
+                        <div class="skills-list" id="currentSkills">
+                            <div class="placeholder-box">
+                                Connect backend to load your skills
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Required Skills -->
+                    <div class="card">
+                        <h2 class="card-title">⚡ Required Skills</h2>
+                        <div class="skills-list" id="requiredSkills">
+                            <div class="placeholder-box">
+                                Connect backend to load required skills
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gap Summary -->
+                <div class="card" style="margin-top: 32px;">
+                    <h2 class="card-title">Gap Summary</h2>
+                    <div class="gap-summary">
+                        <div class="gap-stat">
+                            <div class="gap-number" id="skillsMatched">—</div>
+                            <p class="gap-label">Matched</p>
+                        </div>
+                        <div class="gap-stat">
+                            <div class="gap-number" id="skillsGap">—</div>
+                            <p class="gap-label">Gap</p>
+                        </div>
+                        <div class="gap-stat">
+                            <div class="gap-number" id="readinessPercent">—</div>
+                            <p class="gap-label">Readiness %</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="skill-gap.js"></script>
+</body>
+</html>

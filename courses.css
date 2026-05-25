@@ -1,0 +1,73 @@
+/* ==================== COURSES PAGE STYLES ==================== */
+.filter-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.filter-input,
+.filter-select {
+    padding: 11px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: white;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+.filter-input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+    outline: none;
+    border-color: var(--accent-teal);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.course-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.course-skill {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.course-duration {
+    font-size: 12px;
+    color: var(--accent-gold);
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+    }
+
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h1>CareerCompass</h1>
+                <p>Smart Career Guidance</p>
+            </div>
+            <nav>
+                <ul class="sidebar-nav">
+                    <li><a href="dashboard.html"><span>🏠</span> Dashboard</a></li>
+                    <li><a href="profile.html" class="active"><span>👤</span> Profile</a></li>
+                    <li><a href="career.html"><span>🎯</span> Careers</a></li>
+                    <li><a href="courses.html"><span>📚</span> Courses</a></li>
+                    <li><a href="progress.html"><span>📊</span> Progress</a></li>
+                    <li><a href="skill-gap.html"><span>⚡</span> Skill Gap</a></li>
+                    <li><a href="test.html"><span>✏️</span> Test</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h1 class="page-title">Your Profile</h1>
+                    <p class="page-subtitle">View and manage your personal information</p>
+                    <div id="profileNotice" class="alert" style="display:none; margin-top:16px; padding:12px 14px; border-radius:8px;"></div>
+                </div>
+
+                <div class="grid grid-2">
+                    <!-- Profile Card -->
+                    <div class="card profile-card">
+                        <div class="profile-avatar">👤</div>
+                        <h3 class="profile-name" id="profileName">—</h3>
+                        <p class="profile-email" id="profileEmail">—</p>
+
+                        <div class="profile-info">
+                            <div class="info-row">
+                                <span class="info-label">Email</span>
+                                <p class="info-value" id="infoEmail">—</p>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">CGPA</span>
+                                <p class="info-value" id="infoCGPA">—</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 20px;">Edit Profile</button>
+                    </div>
+
+                    <!-- Skills Card -->
+                    <div class="card">
+                        <h2 class="card-title">Your Skills</h2>
+                        <div class="skills-list" id="skillsList">
+                            <div class="placeholder-box">
+                                Skills will appear here once you complete assessments
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="card" style="margin-top: 24px;">
+                    <h2 class="card-title">Additional Information</h2>
+                    <div class="grid grid-2">
+                        <div class="info-row">
+                            <span class="info-label">Member Since</span>
+                            <p class="info-value" id="memberSince">—</p>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Profile Completion</span>
+                            <p class="info-value" id="profileCompletion">—</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

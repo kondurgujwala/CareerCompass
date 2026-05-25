@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - Test Result</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .result-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 40px 20px;
+        }
+
+        .result-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 48px 40px;
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
+
+        .result-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .result-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .result-subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+        }
+
+        .score-circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-teal), #0694d1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            box-shadow: 0 8px 24px rgba(14, 165, 233, 0.3);
+        }
+
+        .score-circle .percentage {
+            font-size: 36px;
+            font-weight: 700;
+            color: white;
+            line-height: 1;
+        }
+
+        .score-circle .score-label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.85);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .score-breakdown {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            padding: 24px;
+            background: var(--secondary-light);
+            border-radius: 12px;
+            margin-bottom: 32px;
+        }
+
+        .breakdown-item {
+            text-align: center;
+        }
+
+        .breakdown-value {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .breakdown-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-top: 4px;
+        }
+
+        .breakdown-divider {
+            width: 1px;
+            background: var(--border-color);
+        }
+
+        .performance-badge {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+
+        .badge-excellent { background: #dcfce7; color: #166534; }
+        .badge-good      { background: #dbeafe; color: #1e40af; }
+        .badge-average   { background: #fef9c3; color: #854d0e; }
+        .badge-low       { background: #fee2e2; color: #991b1b; }
+
+        .result-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .result-actions a {
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            .result-card {
+                padding: 32px 24px;
+            }
+            .score-circle {
+                width: 120px;
+                height: 120px;
+            }
+            .score-circle .percentage {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="result-wrapper">
+        <div class="result-card">
+            <span class="result-icon" id="resultIcon">🎯</span>
+            <h1 class="result-title">Test Complete!</h1>
+            <p class="result-subtitle">Here's how you performed</p>
+
+            <div class="score-circle">
+                <span class="percentage" id="percentageDisplay">—</span>
+                <span class="score-label">Score</span>
+            </div>
+
+            <div class="score-breakdown">
+                <div class="breakdown-item">
+                    <div class="breakdown-value" id="correctCount">—</div>
+                    <div class="breakdown-label">Correct</div>
+                </div>
+                <div class="breakdown-divider"></div>
+                <div class="breakdown-item">
+                    <div class="breakdown-value" id="wrongCount">—</div>
+                    <div class="breakdown-label">Wrong</div>
+                </div>
+                <div class="breakdown-divider"></div>
+                <div class="breakdown-item">
+                    <div class="breakdown-value" id="totalCount">—</div>
+                    <div class="breakdown-label">Total</div>
+                </div>
+            </div>
+
+            <span class="performance-badge" id="performanceBadge">—</span>
+
+            <div class="result-actions">
+                <a href="test.html" class="btn btn-primary">Retake Test</a>
+                <a href="dashboard.html" class="btn btn-outline">Go to Dashboard</a>
+                <a href="progress.html" class="btn btn-outline">View Progress</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const data = JSON.parse(localStorage.getItem('result') || '{}');
+
+        const score   = data.score      ?? 0;
+        const total   = data.total      ?? 0;
+        const pct     = data.percentage ?? (total ? Math.round(score / total * 100) : 0);
+        const wrong   = total - score;
+
+        document.getElementById('percentageDisplay').textContent = Math.round(pct) + '%';
+        document.getElementById('correctCount').textContent = score;
+        document.getElementById('wrongCount').textContent   = wrong;
+        document.getElementById('totalCount').textContent   = total;
+
+        const badge = document.getElementById('performanceBadge');
+        const icon  = document.getElementById('resultIcon');
+
+        if (pct >= 80) {
+            badge.textContent = '🏆 Excellent Performance';
+            badge.className   = 'performance-badge badge-excellent';
+            icon.textContent  = '🏆';
+        } else if (pct >= 60) {
+            badge.textContent = '👍 Good Job';
+            badge.className   = 'performance-badge badge-good';
+            icon.textContent  = '👍';
+        } else if (pct >= 40) {
+            badge.textContent = '📚 Keep Practicing';
+            badge.className   = 'performance-badge badge-average';
+            icon.textContent  = '📚';
+        } else {
+            badge.textContent = '💪 Needs Improvement';
+            badge.className   = 'performance-badge badge-low';
+            icon.textContent  = '💪';
+        }
+    </script>
+</body>
+</html>

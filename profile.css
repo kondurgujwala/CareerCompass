@@ -1,0 +1,98 @@
+/* ==================== PROFILE PAGE STYLES ==================== */
+.profile-card {
+    text-align: center;
+}
+
+.profile-avatar {
+    font-size: 64px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.profile-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.profile-email {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.profile-info {
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-row {
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.info-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+}
+
+.info-value {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: rgba(14, 165, 233, 0.15);
+    border: 1px solid var(--accent-teal);
+    border-radius: 20px;
+    color: var(--accent-teal);
+    font-size: 13px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.skill-badge:hover {
+    background-color: rgba(14, 165, 233, 0.25);
+}
+
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-avatar {
+        font-size: 48px;
+    }
+
+    .profile-name {
+        font-size: 18px;
+    }
+}

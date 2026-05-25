@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - Recommended Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h1>CareerCompass</h1>
+                <p>Smart Career Guidance</p>
+            </div>
+            <nav>
+                <ul class="sidebar-nav">
+                    <li><a href="dashboard.html"><span>🏠</span> Dashboard</a></li>
+                    <li><a href="profile.html"><span>👤</span> Profile</a></li>
+                    <li><a href="career.html"><span>🎯</span> Careers</a></li>
+                    <li><a href="courses.html" class="active"><span>📚</span> Courses</a></li>
+                    <li><a href="progress.html"><span>📊</span> Progress</a></li>
+                    <li><a href="skill-gap.html"><span>⚡</span> Skill Gap</a></li>
+                    <li><a href="test.html"><span>✏️</span> Test</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h1 class="page-title">Recommended Courses</h1>
+                    <p class="page-subtitle">Upskill with personalized course recommendations</p>
+                    <div id="coursesNotice" class="alert" style="display:none; margin-top:16px; padding:12px 14px; border-radius:8px;"></div>
+                </div>
+
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <input type="text" placeholder="Search courses..." class="filter-input">
+                    <select class="filter-select">
+                        <option>All Categories</option>
+                    </select>
+                </div>
+
+                <!-- Courses Grid -->
+                <div class="grid grid-4" id="coursesGrid">
+                    <div class="placeholder-box" style="grid-column: 1/-1;">
+                        Recommended courses will appear here once backend connects
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="courses.js"></script>
+</body>
+</html>

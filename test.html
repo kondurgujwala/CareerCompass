@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCompass - Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <h1>CareerCompass</h1>
+            <p>Smart Career Guidance</p>
+        </div>
+        <nav>
+            <ul class="sidebar-nav">
+                <li><a href="dashboard.html"><span>🏠</span> Dashboard</a></li>
+                <li><a href="profile.html"><span>👤</span> Profile</a></li>
+                <li><a href="career.html"><span>🎯</span> Careers</a></li>
+                <li><a href="courses.html"><span>📚</span> Courses</a></li>
+                <li><a href="progress.html"><span>📊</span> Progress</a></li>
+                <li><a href="skill-gap.html"><span>⚡</span> Skill Gap</a></li>
+                <li><a href="test.html" class="active"><span>✏️</span> Test</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+
+            <div class="page-header">
+                <h1 class="page-title">Skill Assessment Test</h1>
+                <p class="page-subtitle">Assess your skills and knowledge</p>
+            </div>
+
+            <div class="test-container">
+
+                <!-- Progress -->
+                <div class="test-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p>Question <span id="currentQuestion">1</span> of <span id="totalQuestions">—</span></p>
+                </div>
+
+                <!-- Timer -->
+                <div class="timer-box" id="timerBox">
+                    ⏱ Time Remaining:
+                    <span class="timer-display" id="timeRemaining">08:00</span>
+                </div>
+
+                <!-- Question -->
+                <div class="question-card">
+                    <h3 class="question-text" id="questionText">Loading questions...</h3>
+                </div>
+
+                <!-- Options -->
+                <div class="options-container">
+                    <button class="option-btn" data-option="a" id="optionA"></button>
+                    <button class="option-btn" data-option="b" id="optionB"></button>
+                    <button class="option-btn" data-option="c" id="optionC"></button>
+                    <button class="option-btn" data-option="d" id="optionD"></button>
+                </div>
+
+                <!-- Controls -->
+                <div class="test-controls">
+                    <button class="btn btn-primary" id="submitBtn">Next →</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="test.js"></script>
+
+</body>
+</html>
